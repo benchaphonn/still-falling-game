@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #ffe7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+    font-family: monospace;
+    color: #000;
+}
+
+.playlist-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 90%;
+    max-width: 800px;
+
+    max-height: 70vh; 
+    overflow-y: auto; 
+    padding-right: 10px; 
+    margin: 30px auto;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.play-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: none;
+    background: #c40000;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.play-btn.playing {
+    background: #000;
+}
+
+
+.back-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: 2px solid #c40000;
+    background: white;
+    color: #c40000;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: sticky;
+    bottom: 10px; 
+    z-index: 5;
+}
+
+.back-btn:hover {
+    background: #c40000;
+    color: white;
+}
+
+
+.heart {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+}
+
+#youtube-player {
+    position: absolute;
+    top: -5000px; 
+    left: 0;
+}

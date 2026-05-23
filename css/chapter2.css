@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fbeedd;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.title {
+  color: #c40000;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timer,
+.scoreboard {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.game-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 3px solid #c40000;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.card-emoji {
+  visibility: hidden;
+}
+
+.card.flipped,
+.card.matched {
+  background-color: #fff7d6;
+  transform: scale(1.05);
+}
+
+.card.flipped .card-emoji,
+.card.matched .card-emoji {
+  visibility: visible;
+}
+
+.card.matched {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-box {
+  background-color: #7da5f5;
+  padding: 40px 60px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#popupTitle {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#popupEmoji {
+  font-size: 80px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.play-again {
+  padding: 15px 40px;
+  font-size: 1.5em;
+  border: 3px solid #c40000;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #c40000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.play-again:hover {
+  background-color: #c40000;
+  color: #fff;
+}

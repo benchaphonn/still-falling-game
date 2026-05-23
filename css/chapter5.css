@@ -1,0 +1,189 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family: Arial,sans-serif;
+    background:#f6ecdf;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:680px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.title{
+    color:#c40000;
+    font-size:38px;
+    text-align:center;
+    line-height:1.1;
+    margin-bottom:24px;
+}
+
+.name-input{
+    width:280px;
+    padding:11px 18px;
+    border:2px solid transparent;
+    border-radius:50px;
+    background:white;
+    color:#c40000;
+    font-size:18px;
+    outline:none;
+    transition:0.25s;
+}
+.name-input::placeholder{ color:#c40000; }
+.name-input:hover{ border:2px solid #d40000; }
+.name-input:focus{ background:#d40000; color:white; border:2px solid #d40000; }
+.name-input:focus::placeholder{ color:white; }
+
+.character-title{
+    margin-top:24px;
+    margin-bottom:14px;
+    color:#c40000;
+    font-size:24px;
+}
+
+.character-list{
+    display:flex;
+    gap:12px;
+}
+
+.character{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    border:2px solid transparent;
+    background:white;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.25s;
+}
+.character:hover{ 
+    border:2px solid #d40000; 
+
+}
+.character.active {
+    border:2px solid #d40000;
+    background:#ffdede;
+}
+
+.btn{
+    margin-top:20px;
+    width:130px;
+    height:46px;
+    border-radius:50px;
+    border:2px solid transparent;
+    background:white;
+    color:#c40000;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.2s;
+}
+.btn:hover{ 
+    background:white; 
+    color:#c40000; 
+    border:2px solid #d40000; 
+}
+
+.btn:active{ 
+    background:#d40000; 
+    color:white; 
+    border:2px solid #d40000; 
+}
+
+.hidden{ display:none; }
+
+.player-box{
+    margin-top:30px;
+    width:340px;
+    min-height:95px;
+    padding:18px;
+    border:2px solid transparent;
+    border-radius:25px;
+    background:white;
+    display:flex;
+    align-items:flex-start;
+    gap:22px;
+    flex-wrap:wrap;
+    transition:0.25s;
+}
+
+.player-box:hover{ 
+    border:2px solid #d40000; 
+}
+
+.player{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:#d40000;
+}
+.player-name{ 
+    font-size:16px; 
+}
+
+.player-emoji{ 
+    margin-top:5px; 
+    font-size:28px; 
+}
+
+.no-player{ 
+    color:#d40000; 
+    font-size:18px; 
+}
+
+.howto-page{ 
+    min-height:100vh; 
+    justify-content:center; 
+}
+
+.howto-title{ 
+    margin-top:10px; 
+    margin-bottom:40px; 
+    color:black; 
+    font-size:42px; 
+    font-weight:bold; 
+    text-align:center; 
+}
+
+.rule-box{ 
+    width:100%; 
+    max-width:650px; 
+    color:#c40000; 
+    font-size:22px; 
+    line-height:1.9; 
+    font-weight:bold; 
+}
+
+.rule-box p{ 
+    margin-bottom:18px; 
+}
+
+.play-btn{ 
+    margin-top:45px; 
+    background:white; 
+    border:2px solid #d40000; 
+}
+
+.play-btn:hover{ 
+    background:#fff5f5; 
+}
+
+.play-btn:active{ 
+    background:#d40000; 
+    color:white; 
+}
+.player-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:#d40000;
+}

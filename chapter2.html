@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 2</title>
+  <link rel="stylesheet" href="css/chapter2.css" />
+</head>
+<body>
+  <h1 class="title">‧⁺◟꒰ Memory ꒱˚₊˚•</h1>
+  <div class="timer" id="timer">Time 00:40</div>
+
+  <div class="scoreboard">
+    Player 1: <span id="player1Score">0</span>
+    Player 2: <span id="player2Score">0</span>
+  </div>
+
+  <div class="game-area">
+    <div id="cardsContainer"></div>
+  </div>
+
+  <div class="popup hidden" id="popup">
+    <div class="popup-box">
+      <h1 id="popupTitle">OUT OF TIME</h1>
+      <div class="clock" id="popupEmoji">⏰</div>
+      <button type="button" class="play-again" id="popupBtn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/chapter2.js" defer></script>
+</body>
+</html>

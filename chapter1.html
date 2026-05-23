@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 1</title>
+  <link rel="stylesheet" href="css/chapter1.css" />
+</head>
+<body>
+  <div id="gamePage">
+    <h1 class="title">⋆𐙚 ̊. 𝗛𝗲𝗮𝗿𝘁 𝗖𝗼𝗹𝗹𝗲𝗰𝘁𝗼𝗿 .☘︎ ݁˖</h1>
+    <div class="timer" id="timer">Time 00:20</div>
+
+    <div id="gameArea">
+      <div id="player1" class="player"></div>
+      <div id="player2" class="player"></div>
+      <div id="heartsContainer"></div>
+    </div>
+  </div>
+
+  <div class="popup hidden" id="popup">
+    <div class="popup-box">
+      <h1 id="popupTitle">OUT OF TIME</h1>
+      <div class="clock" id="popupEmoji">⏰</div>
+      <button type="button" class="play-again" id="popupBtn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/chapter1.js" defer></script>
+</body>
+</html>

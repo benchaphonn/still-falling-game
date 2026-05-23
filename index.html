@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Still Falling For You</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container" id="lobbyPage">
+        <h1 class="title">˚ ༘♡ ꜱᴛɪʟʟ ꜰᴀʟʟɪɴɢ ꜰᴏʀ ʏᴏᴜ ꒰ᐢ·͈  ̫ ·͈⑅ᐢ꒱ ୭</h1>
+        <input type="text" class="name-input" id="nameInput" placeholder="name..">
+        <div class="character-title">˚◡̈ ᴄʜᴀʀᴀᴄᴛᴇʀ ⋆⁺₊⋆</div>
+        <div class="character-list">
+            <button class="character">🐶</button>
+            <button class="character">🐰</button>
+            <button class="character">🐱</button>
+            <button class="character">🦁</button>
+        </div>
+        <button class="btn" id="joinBtn">Join</button>
+        <div class="player-box" id="playerBox">
+            <div class="no-player" id="noPlayer">No player</div>
+        </div>
+        <button class="btn" id="startBtn">Start</button>
+    </div>
+
+    <div class="container howto-page hidden" id="howToPage">
+        <h1 class="title">˚ ༘♡ ꜱᴛɪʟʟ ꜰᴀʟʟɪɴɢ ꜰᴏʀ ʏᴏᴜ ꒰ᐢ·͈  ̫ ·͈⑅ᐢ꒱ ୭</h1>
+        <h2 class="howto-title">✿ ʜᴏᴡ ᴛᴏ ᴘʟᴀʏ ɢᴀᴍᴇ ꕀ .*</h2>
+        <div class="rule-box">
+            <p>1. 2 Player ใช้ปุ่ม WASD + Arrow Keys</p>
+            <p>2. Chapter 1 เก็บหัวใจทั้งหมดโดยมีเวลา 20 วินาที</p>
+            <p>3. Chapter 2 จับคู่ไพ่เหมือนทั้งหมด 10 คู่โดยมีเวลา 40 วินาที</p>
+            <p>4. Chapter 3 ‧⁺◟꒰ ʏᴏᴜ ᴀɴᴅ ᴍᴇ ꒱˚₊˚•</p>
+            <p>4. Chapter 4 *.❅· 𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁𝘀 𝗯𝘆 𝘀𝗵𝗮𝗻𝗸𝘀𝗹𝗼𝘄 ₊˚ 🎀 ꔛ</p>
+            <p>4. Chapter 5 ᱸ⁎⁺˳ 💭 ʟᴜᴄᴋʏ ʜᴀᴠᴇ ᴛᴏ ʏᴏᴜ 👀 ꕀ .*</p>
+        </div>
+        <button id="playBtn" class="btn play-btn">Play Game</button>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+</html>
