@@ -166,19 +166,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let dy = 0;
 
   if (mySlot === "player1") {
-    if (pressed["w"]) dy -= speed;
-    if (pressed["s"]) dy += speed;
-    if (pressed["a"]) dx -= speed;
-    if (pressed["d"]) dx += speed;
-  }
-
-  if (mySlot === "player2") {
-    if (pressed["arrowup"]) dy -= speed;
-    if (pressed["arrowdown"]) dy += speed;
-    if (pressed["arrowleft"]) dx -= speed;
-    if (pressed["arrowright"]) dx += speed;
-  }
-
+  if (pressed["KeyW"]) dy -= speed;
+  if (pressed["KeyS"]) dy += speed;
+  if (pressed["KeyA"]) dx -= speed;
+  if (pressed["KeyD"]) dx += speed;
+} else {
+  if (pressed["ArrowUp"]) dy -= speed;
+  if (pressed["ArrowDown"]) dy += speed;
+  if (pressed["ArrowLeft"]) dx -= speed;
+  if (pressed["ArrowRight"]) dx += speed;
+}
   if (dx || dy) {
     if (!timerStarted) socket.emit("chapter1FirstMove");
 
@@ -202,19 +199,17 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
   document.addEventListener("keydown", (event) => {
-    const key = event.key.toLowerCase();
+  const key = event.code;
 
-    if (
-      ["w", "a", "s", "d", "arrowup", "arrowdown", "arrowleft", "arrowright"].includes(key)
-    ) {
-      event.preventDefault();
-      pressed[key] = true;
-    }
-  });
+  if (["KeyW", "KeyA", "KeyS", "KeyD", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(key)) {
+    event.preventDefault();
+    pressed[key] = true;
+  }
+});
 
   document.addEventListener("keyup", (event) => {
-    pressed[event.key.toLowerCase()] = false;
-  });
+  pressed[event.code] = false;
+});
 
   socket.on("playerSlot", (data) => {
     mySlot = data.slot;
