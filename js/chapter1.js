@@ -40,15 +40,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const p2 = players.find((p) => p.slot === "player2");
   
       if (p1?.character) {
-        player1.emoji = p1.character;
-        player1Div.textContent = p1.character;
-        player1Div.title = p1.name || "Player 1";
-      }
-      if (p2?.character) {
-        player2.emoji = p2.character;
-        player2Div.textContent = p2.character;
-        player2Div.title = p2.name || "Player 2";
-      }
+  player1.emoji = p1.character;
+
+  player1Div.innerHTML = `
+    <div class="player-name">${p1.name || "Player 1"}</div>
+    <div class="player-character">${p1.character}</div>
+  `;
+}
+
+if (p2?.character) {
+  player2.emoji = p2.character;
+
+  player2Div.innerHTML = `
+    <div class="player-name">${p2.name || "Player 2"}</div>
+    <div class="player-character">${p2.character}</div>
+  `;
+}
   
       if (!player1Div.textContent && player1.emoji) player1Div.textContent = player1.emoji;
       if (!player2Div.textContent && player2.emoji) player2Div.textContent = player2.emoji;
