@@ -52,13 +52,32 @@ body{
 /* PLAYER */
 .player{
     position:absolute;
-    width:50px;
-    height:50px;
+    width:60px;
+    height:70px;
     display:flex;
     justify-content:center;
-    align-items:center;
-    font-size:40px;
+    align-items:flex-end;
     z-index:10;
+}
+
+/* ชื่อบนหัวตัวละคร */
+.player-name{
+    position:absolute;
+    top:-25px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#c40000;
+    font-size:15px;
+    font-weight:bold;
+    white-space:nowrap;
+    text-shadow:0 0 4px white;
+    z-index:20;
+}
+
+/* ตัวละคร */
+.player-character{
+    font-size:40px;
+    line-height:1;
 }
 
 /* HEART */
