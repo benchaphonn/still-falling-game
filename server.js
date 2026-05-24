@@ -55,7 +55,7 @@ function findByToken(token) {
 
 function makeHearts() {
   const hearts = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 20; i++) {
     hearts.push({
       id: i,
       x: Math.floor(25 + Math.random() * 620),
