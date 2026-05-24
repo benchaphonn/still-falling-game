@@ -10,7 +10,7 @@ function nextSlide() {
 setInterval(nextSlide, 3000); 
 
 const timerDisplay = document.getElementById('timer');
-const startDate = new Date(2026, 2, 26); 
+const startDate = new Date(2026, 1, 26); 
 
 function updateTimer() {
     const now = new Date();
