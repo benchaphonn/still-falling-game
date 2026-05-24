@@ -160,44 +160,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function moveLoop() {
-    if (ended) return;
+  if (ended) return;
 
-    let dx = 0;
-    let dy = 0;
+  let dx = 0;
+  let dy = 0;
 
-    if (mySlot === "player1") {
-      if (pressed["w"]) dy -= speed;
-      if (pressed["s"]) dy += speed;
-      if (pressed["a"]) dx -= speed;
-      if (pressed["d"]) dx += speed;
-    } else {
-      if (pressed["arrowup"]) dy -= speed;
-      if (pressed["arrowdown"]) dy += speed;
-      if (pressed["arrowleft"]) dx -= speed;
-      if (pressed["arrowright"]) dx += speed;
-    }
-
-    if (dx || dy) {
-      if (!timerStarted) socket.emit("chapter1FirstMove");
-
-      const player = mySlot === "player2" ? player2 : player1;
-      const div = mySlot === "player2" ? player2Div : player1Div;
-
-      player.x = Math.max(0, Math.min(gameArea.clientWidth - 50, player.x + dx));
-      player.y = Math.max(0, Math.min(gameArea.clientHeight - 50, player.y + dy));
-
-      div.style.left = `${player.x}px`;
-      div.style.top = `${player.y}px`;
-
-      socket.emit("playerMoved", {
-        id: mySlot,
-        x: player.x,
-        y: player.y,
-      });
-    }
-
-    animationId = requestAnimationFrame(moveLoop);
+  if (mySlot === "player1") {
+    if (pressed["w"]) dy -= speed;
+    if (pressed["s"]) dy += speed;
+    if (pressed["a"]) dx -= speed;
+    if (pressed["d"]) dx += speed;
   }
+
+  if (mySlot === "player2") {
+    if (pressed["arrowup"]) dy -= speed;
+    if (pressed["arrowdown"]) dy += speed;
+    if (pressed["arrowleft"]) dx -= speed;
+    if (pressed["arrowright"]) dx += speed;
+  }
+
+  if (dx || dy) {
+    if (!timerStarted) socket.emit("chapter1FirstMove");
+
+    const player = mySlot === "player2" ? player2 : player1;
+    const div = mySlot === "player2" ? player2Div : player1Div;
+
+    player.x = Math.max(0, Math.min(gameArea.clientWidth - 50, player.x + dx));
+    player.y = Math.max(0, Math.min(gameArea.clientHeight - 50, player.y + dy));
+
+    div.style.left = `${player.x}px`;
+    div.style.top = `${player.y}px`;
+
+    socket.emit("playerMoved", {
+      id: mySlot,
+      x: player.x,
+      y: player.y,
+    });
+  }
+
+  animationId = requestAnimationFrame(moveLoop);
+}
 
   document.addEventListener("keydown", (event) => {
     const key = event.key.toLowerCase();
