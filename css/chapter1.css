@@ -52,18 +52,19 @@ body{
 /* PLAYER */
 .player{
     position:absolute;
-    width:60px;
-    height:70px;
+    width:50px;
+    height:50px;
     display:flex;
     justify-content:center;
-    align-items:flex-end;
+    align-items:center;
+    font-size:40px;
     z-index:10;
+    overflow:visible;
 }
 
-/* ชื่อบนหัวตัวละคร */
 .player-name{
     position:absolute;
-    top:-28px;
+    top:-25px;
     left:50%;
     transform:translateX(-50%);
     color:#c40000;
@@ -75,13 +76,6 @@ body{
     pointer-events:none;
 }
 
-.player-character{
-    font-size:40px;
-    line-height:1;
-    pointer-events:none;
-}
-
-/* ตัวละคร */
 .player-character{
     font-size:40px;
     line-height:1;
