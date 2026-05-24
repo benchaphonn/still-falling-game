@@ -63,7 +63,7 @@ body{
 /* ชื่อบนหัวตัวละคร */
 .player-name{
     position:absolute;
-    top:-25px;
+    top:-28px;
     left:50%;
     transform:translateX(-50%);
     color:#c40000;
@@ -72,12 +72,20 @@ body{
     white-space:nowrap;
     text-shadow:0 0 4px white;
     z-index:20;
+    pointer-events:none;
+}
+
+.player-character{
+    font-size:40px;
+    line-height:1;
+    pointer-events:none;
 }
 
 /* ตัวละคร */
 .player-character{
     font-size:40px;
     line-height:1;
+    pointer-events:none;
 }
 
 /* HEART */
