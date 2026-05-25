@@ -23,7 +23,7 @@ let chapter2Scores = { player1: 0, player2: 0 };
 let chapter2Cards = [];
 
 function makeChapter2Cards() {
-  const emojis = ["🐶", "🐰", "🪽", "☀️", "🐱", "🪄", "🦈", "🐵", "🐸", "🐯"];
+  const emojis = ["🐶", "🐰", "🕊️", "☀️", "🐱", "⭐", "🦈", "🐵", "💖", "🐯"];
   const deck = [];
 
   emojis.forEach((emoji) => {
